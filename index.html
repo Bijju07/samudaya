@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="kn">
+<head>
+<meta charset="UTF-8">
+<title>ಸಮುದಾಯ ದತ್ತ ಶಾಲಾ ಕಾರ್ಯಕ್ರಮ - ಮಾರ್ಗದರ್ಶಕರ ವರದಿ ನಮೂನೆ</title>
+<style>
+  *, *::before, *::after {
+    box-sizing: border-box;
+  }
+  @page {
+    size: A4 portrait;
+    margin: 8mm 10mm 8mm 10mm;
+  }
+  body {
+    font-family: 'Noto Sans Kannada', 'Tunga', 'Kedage', 'Mallige', sans-serif;
+    color: #111;
+    background: #e9ecef;
+    margin: 0;
+    padding: 15px 0;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  .sheet {
+    background: #fff;
+    width: 210mm;
+    min-height: 297mm;
+    margin: 0 auto 20px auto;
+    padding: 10mm 12mm;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  }
+  
+  @media print {
+    body {
+      background: none;
+      padding: 0;
+    }
+    .sheet {
+      width: 100%;
+      min-height: auto;
+      margin: 0;
+      padding: 0;
+      box-shadow: none;
+      page-break-after: always;
+    }
+    .sheet:last-child {
+      page-break-after: avoid;
+    }
+    .no-print {
+      display: none !important;
+    }
+  }
+
+  .toolbar {
+    max-width: 210mm;
+    margin: 0 auto 12px auto;
+    background: #0f2b48;
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .toolbar button {
+    background: #ffc107;
+    color: #000;
+    border: none;
+    padding: 6px 16px;
+    border-radius: 4px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  /* Header Box */
+  .header-box {
+    text-align: center;
+    border: 1.5px solid #111;
+    padding: 5px 4px;
+    background: #fdfdfd;
+    margin-bottom: 6px;
+  }
+  .header-box h2 {
+    margin: 0 0 2px 0;
+    font-size: 14.5px;
+    font-weight: bold;
+    color: #0b2239;
+  }
+  .header-box h3 {
+    margin: 0 0 2px 0;
+    font-size: 13px;
+    font-weight: bold;
+  }
+  .header-box .sub-title {
+    font-size: 12.5px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+
+  /* Grid Tables */
+  table.grid-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 6px;
+    font-size: 11px;
+    line-height: 1.25;
+  }
+  table.grid-table th, table.grid-table td {
+    border: 1px solid #222;
+    padding: 3.5px 5px;
+  }
+  table.grid-table th {
+    background-color: #f1f4f8;
+    color: #111;
+    font-weight: bold;
+  }
+  
+  .col-lbl {
+    font-weight: bold;
+    background-color: #f8f9fa;
+    white-space: nowrap;
+    width: 28%;
+  }
+  .col-val {
+    width: 72%;
+    outline: none;
+  }
+  .col-val:focus, td.editable:focus {
+    background-color: #fff9db !important;
+  }
+
+  .table-title {
+    font-weight: bold;
+    font-size: 11.5px;
+    background: #e2e8f0;
+    padding: 3px 6px;
+    border: 1px solid #222;
+    border-bottom: none;
+  }
+
+  /* Two Column Questions Table */
+  table.q-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 6px;
+    font-size: 11px;
+  }
+  table.q-table th, table.q-table td {
+    border: 1px solid #222;
+    padding: 3px 6px;
+    vertical-align: middle;
+  }
+  table.q-table th.sec-header {
+    background-color: #e2e8f0;
+    text-align: left;
+    font-size: 11.5px;
+    padding: 3px 6px;
+  }
+  table.q-table td.q-cell {
+    width: 62%;
+    background-color: #fff;
+    font-weight: 500;
+  }
+  table.q-table td.ans-cell {
+    width: 38%;
+    background-color: #fafbfc;
+    min-height: 20px;
+    outline: none;
+  }
+  table.q-table td.ans-cell:focus {
+    background-color: #fff9db !important;
+  }
+
+  /* Signatures */
+  table.sig-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+    border: 1px solid #222;
+  }
+  table.sig-table td {
+    border: 1px solid #222;
+    padding: 16px 12px 6px 12px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 12px;
+    width: 50%;
+  }
+</style>
+</head>
+<body>
+
+<div class="toolbar no-print">
+  <span>📐 <strong>A4 ಕಾಲಮ್ ಗ್ರಿಡ್ ಫಾರ್ಮ್ಯಾಟ್ (Neat Column Draw - Strict 2 Pages)</strong> — ಕ್ಲಿಕ್ ಮಾಡಿ ಭರ್ತಿ ಮಾಡಬಹುದು.</span>
+  <button onclick="window.print()">🖨️ Print / Save as PDF</button>
+</div>
+
+<!-- ==================== PAGE 1 ==================== -->
+<div class="sheet">
+  <div class="header-box">
+    <h2>ಕ್ಷೇತ್ರ ಶಿಕ್ಷಣಾಧಿಕಾರಿಗಳು ಹಾಗೂ ಕ್ಷೇತ್ರ ಸಮನ್ವಯಾಧಿಕಾರಿಗಳ ಕಛೇರಿ ಕೆ.ಜಿ.ಎಫ್</h2>
+    <h3>ಮೊದಲನೇ ಸಮುದಾಯ ದತ್ತ ಶಾಲಾ ಕಾರ್ಯಕ್ರಮ 2026-27</h3>
+    <div class="sub-title">ಮಾರ್ಗದರ್ಶಕರ ವರದಿ ನಮೂನೆ</div>
+  </div>
+
+  <!-- Items 1 to 4 in a Neat Structured Column Grid -->
+  <table class="grid-table">
+    <tr>
+      <td class="col-lbl">1. ಶಾಲೆಯ ಹೆಸರು ಮತ್ತು ವಿಳಾಸ :</td>
+      <td class="col-val" contenteditable="true" colspan="3"></td>
+    </tr>
+    <tr>
+      <td class="col-lbl">2. ಕಾರ್ಯಕ್ರಮದ ದಿನಾಂಕ :</td>
+      <td class="col-val" contenteditable="true" colspan="3">29.10.2026 ( &nbsp; &nbsp; &nbsp; ) &nbsp; &nbsp; / &nbsp; &nbsp; 30.10.2026 ( &nbsp; &nbsp; &nbsp; )</td>
+    </tr>
+    <tr>
+      <td class="col-lbl">3. ಭಾಗವಹಿಸಿದ ಅಧಿಕಾರಿಗಳ ಹೆಸರು & ಹುದ್ದೆ :</td>
+      <td class="col-val" contenteditable="true" colspan="3"></td>
+    </tr>
+    <tr>
+      <td class="col-lbl">4. ಹಿಂದಿನ ನಡಾವಳಿಯ ಮೇಲೆ ಕೈಗೊಂಡ ಕ್ರಮ :</td>
+      <td class="col-val" contenteditable="true" colspan="3" style="height: 24px;"></td>
+    </tr>
+  </table>
+
+  <!-- Item 5: Tables -->
+  <div class="table-title">5. ದಾಖಲಾತಿ ಮತ್ತು ಹಾಜರಾತಿ ವಿವರ (ದಿನಾಂಕ: 29.10.2026)</div>
+  <table class="grid-table" style="text-align: center; margin-bottom: 6px;">
+    <thead>
+      <tr>
+        <th style="width: 19%;">ವಿವರ / ತರಗತಿ</th>
+        <th style="width: 9%;">1</th>
+        <th style="width: 9%;">2</th>
+        <th style="width: 9%;">3</th>
+        <th style="width: 9%;">4</th>
+        <th style="width: 9%;">5</th>
+        <th style="width: 9%;">6</th>
+        <th style="width: 9%;">7</th>
+        <th style="width: 9%;">8</th>
+        <th style="width: 9%;">ಒಟ್ಟು</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td style="font-weight: bold; background: #f8f9fa; text-align: left; padding-left: 8px;">ದಾಖಲಾತಿ</td>
+        <td class="editable" contenteditable="true"></td>
+        <td class="editable" contenteditable="true"></td>
+        <td class="editable" contenteditable="true"></td>
+        <td class="editable" contenteditable="true"></td>
+        <td class="editable" contenteditable="true"></td>
+        <td class="editable" contenteditable="true"></td>
+        <td class="editable" contenteditable="true"></td>
+        <td class="editable" contenteditable="true"></td>
+        <td class="editable" contenteditable="true"></td>
+      </tr>
+      <tr>
+        <td style="font-weight: bold; background: #f8f9fa; text-align: left; padding-left: 8px;">ಹಾಜರಾತಿ</td>
+        <td class="editable" contenteditable="true"></td>
+        <td class="editable" contenteditable="true"></td>
+        <td class="editable" contenteditable="true"></td>
+        <td class="editable" contenteditable="true"></td>
+        <td class="editable" contenteditable="true"></td>
+        <td class="editable" contenteditable="true"></td>
+        <td class="editable" contenteditable="true"></td>
+        <td class="editable" contenteditable="true"></td>
+        <td class="editable" contenteditable="true"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="table-title">ಜೂನ್ ತಿಂಗಳಿನಲ್ಲಿ “ಬಿ” ಗ್ರೇಡ್‌ನಲ್ಲಿದ್ದು ಸೆಪ್ಟೆಂಬರ್ ಅಂತ್ಯಕ್ಕೆ “ಎ” ಗ್ರೇಡ್‌ಗೆ ಬಂದ ಮಕ್ಕಳ ಮಾಹಿತಿ</div>
+  <table class="grid-table" style="text-align: center; margin-bottom: 6px;">
+    <thead>
+      <tr>
+        <th rowspan="2" style="width: 16%;">ತರಗತಿ</th>
+        <th colspan="3">ಜೂನ್ ನಲ್ಲಿನ “ಬಿ” ಗ್ರೇಡ್ ಮಕ್ಕಳ ಸಂಖ್ಯೆ</th>
+        <th colspan="3">ಸೆಪ್ಟೆಂಬರ್ ಅಂತ್ಯಕ್ಕೆ “ಎ” ಗ್ರೇಡ್‌ಗೆ ಬಂದ ಮಕ್ಕಳ ಸಂಖ್ಯೆ</th>
+      </tr>
+      <tr>
+        <th style="width: 14%;">ಗಂಡು</th>
+        <th style="width: 14%;">ಹೆಣ್ಣು</th>
+        <th style="width: 14%;">ಒಟ್ಟು</th>
+        <th style="width: 14%;">ಗಂಡು</th>
+        <th style="width: 14%;">ಹೆಣ್ಣು</th>
+        <th style="width: 14%;">ಒಟ್ಟು</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>1</td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td></tr>
+      <tr><td>2</td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td></tr>
+      <tr><td>3</td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td></tr>
+      <tr><td>4</td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td></tr>
+      <tr><td>5</td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td></tr>
+      <tr><td>6</td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td></tr>
+      <tr><td>7</td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td></tr>
+      <tr><td>8</td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td></tr>
+      <tr style="font-weight: bold; background-color: #f1f4f8;">
+        <td>ಒಟ್ಟು</td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td><td class="editable" contenteditable="true"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Item 6: SDMC in Neat 2-Column Draw -->
+  <table class="q-table">
+    <thead>
+      <tr>
+        <th class="sec-header" colspan="2">6. ಶಾಲಾಭಿವೃದ್ಧಿ ಮತ್ತು ಮೇಲುಸ್ತುವಾರಿ ಸಮಿತಿಯ ಪಾತ್ರ (SDMC)</th>
+      </tr>
+      <tr style="background:#f8f9fa; font-size:10.5px;">
+        <th style="width: 62%; text-align: left;">ಅಂಶಗಳು / ಪ್ರಶ್ನೆಗಳು</th>
+        <th style="width: 38%; text-align: left;">ವಿವರ / ಅಭಿಪ್ರಾಯ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="q-cell">1. ಸಮಿತಿ ಸದಸ್ಯರೆಲ್ಲರೂ ಭಾಗವಹಿಸಿದ್ದಾರೆಯೇ?</td>
+        <td class="ans-cell" contenteditable="true"></td>
+      </tr>
+      <tr>
+        <td class="q-cell">2. ಇಲ್ಲವಾದಲ್ಲಿ ಕಾರಣಗಳೇನು?</td>
+        <td class="ans-cell" contenteditable="true"></td>
+      </tr>
+      <tr>
+        <td class="q-cell">3. ಸಮಿತಿ ಸಭೆಯಲ್ಲಿ ಚರ್ಚೆಯಾದ ಮುಖ್ಯ ವಿಷಯಗಳು ಯಾವುವು?</td>
+        <td class="ans-cell" contenteditable="true"></td>
+      </tr>
+      <tr>
+        <td class="q-cell">4. ಸಮಿತಿ ಸಭೆಯಲ್ಲಿ ಪರಿಹಾರವಾದ ಸಮಸ್ಯೆಗಳು ಯಾವುವು?</td>
+        <td class="ans-cell" contenteditable="true"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Item 7: CCE in Neat 2-Column Draw -->
+  <table class="q-table">
+    <thead>
+      <tr>
+        <th class="sec-header" colspan="2">7. ಮಕ್ಕಳ ಪ್ರಗತಿ ಕುರಿತು ಪೋಷಕರೊಡನೆ ನಡೆಸಿದ ಸಮಾಲೋಚನೆ (ಸಿ.ಸಿ.ಇ ಆಧಾರಿತ)</th>
+      </tr>
+      <tr style="background:#f8f9fa; font-size:10.5px;">
+        <th style="width: 62%; text-align: left;">ಅಂಶಗಳು / ಪ್ರಶ್ನೆಗಳು</th>
+        <th style="width: 38%; text-align: left;">ವಿವರ / ಅಭಿಪ್ರಾಯ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="q-cell">1. ಪ್ರಗತಿ ಪತ್ರ, ಉತ್ತರ ಪತ್ರಿಕೆ, ವೈಯಕ್ತಿಕ ದಾಖಲೆ, ಅಭ್ಯಾಸ ಪುಸ್ತಕ, ಕೃತಿ ಸಂಪುಟ ಪೋಷಕರಿಗೆ ನೀಡಿ ಪ್ರಗತಿ ಸಮಾಲೋಚಿಸಲಾಗಿದೆಯೇ?</td>
+        <td class="ans-cell" contenteditable="true"></td>
+      </tr>
+      <tr>
+        <td class="q-cell">2. ಉತ್ತರ ಪತ್ರಿಕೆ ಹಾಗೂ ವಿದ್ಯಾರ್ಥಿ ಕಲಿಕೆಯ ಬಗ್ಗೆ ಪೋಷಕರ ಅಭಿಪ್ರಾಯವೇನು?</td>
+        <td class="ans-cell" contenteditable="true"></td>
+      </tr>
+      <tr>
+        <td class="q-cell">3. ಈ ಮೇಲಿನ ದಾಖಲೆಗಳನ್ನು ಶಿಕ್ಷಕರು ಹೇಗೆ ನಿರ್ವಹಿಸಿದ್ದಾರೆ?</td>
+        <td class="ans-cell" contenteditable="true"></td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- ==================== PAGE 2 ==================== -->
+<div class="sheet">
+  <!-- Item 8: Attendance Column Draw -->
+  <table class="q-table">
+    <thead>
+      <tr>
+        <th class="sec-header" colspan="2">8. ವಿದ್ಯಾರ್ಥಿಗಳ ಹಾಜರಾತಿ ಮಾಹಿತಿ</th>
+      </tr>
+      <tr style="background:#f8f9fa; font-size:10.5px;">
+        <th style="width: 62%; text-align: left;">ಅಂಶಗಳು / ಪ್ರಶ್ನೆಗಳು</th>
+        <th style="width: 38%; text-align: left;">ವಿವರ / ಅಭಿಪ್ರಾಯ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="q-cell">1. ಶಾಲೆಯಿಂದ ಹೊರಗುಳಿದ ಮಕ್ಕಳ ಸಂಖ್ಯೆ ಎಷ್ಟು?</td>
+        <td class="ans-cell" contenteditable="true"></td>
+      </tr>
+      <tr>
+        <td class="q-cell">2. ಓ.ಓ.ಎಸ್.ಸಿ ಮಕ್ಕಳನ್ನು ಕಲಿಕಾ ಕೇಂದ್ರಕ್ಕೆ ಸೇರಿಸಲು ಮಾಡಿದ ವ್ಯವಸ್ಥೆ ಹಾಗೂ ಸೇರಿಸಿದ ಮಕ್ಕಳ ಸಂಖ್ಯೆ ಎಷ್ಟು?</td>
+        <td class="ans-cell" contenteditable="true"></td>
+      </tr>
+      <tr>
+        <td class="q-cell">3. ಶೇ.80% ರಷ್ಟು ಹಾಜರಾತಿ ಕಡಿಮೆಯಿರುವ ಮಕ್ಕಳ ಸಂಖ್ಯೆ ಎಷ್ಟು?</td>
+        <td class="ans-cell" contenteditable="true"></td>
+      </tr>
+      <tr>
+        <td class="q-cell">4. ಗೈರು ಹಾಜರಿ ಕಡಿಮೆ ಮಾಡಲು ಯಾವ ಕ್ರಮಗಳನ್ನು ಕೈಗೊಳ್ಳಲಾಗಿದೆ?</td>
+        <td class="ans-cell" contenteditable="true"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Item 9: Learning Demo Column Draw -->
+  <table class="q-table">
+    <thead>
+      <tr>
+        <th class="sec-header" colspan="2">9. ಮಕ್ಕಳ ಕಲಿಕಾ ಪ್ರದರ್ಶನ ಕುರಿತು ವಿವರ</th>
+      </tr>
+      <tr style="background:#f8f9fa; font-size:10.5px;">
+        <th style="width: 62%; text-align: left;">ಅಂಶಗಳು / ಪ್ರಶ್ನೆಗಳು</th>
+        <th style="width: 38%; text-align: left;">ವಿವರ / ಅಭಿಪ್ರಾಯ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="q-cell">1. ಕಲಿಕಾ ಪ್ರದರ್ಶನದಲ್ಲಿ ನೀಡಿದ ಅಥವಾ ಮಕ್ಕಳೊಂದಿಗೆ ಸಂವಹಿಸಿದ ಕಾರ್ಯಕ್ರಮದ ವಿವರ :</td>
+        <td class="ans-cell" contenteditable="true" style="height: 36px;"></td>
+      </tr>
+      <tr>
+        <td class="q-cell">2. ಪಠ್ಯಕ್ರಮ ಆಧರಿಸಿ ರೂಪಿಸಿದ ಚಟುವಟಿಕೆಗಳ ವಿವರ :</td>
+        <td class="ans-cell" contenteditable="true" style="height: 36px;"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Item 10: Co-curricular Column Draw -->
+  <table class="q-table">
+    <thead>
+      <tr>
+        <th class="sec-header" colspan="2">10. ಸಹಪಠ್ಯ ಚಟುವಟಿಕೆ ಮತ್ತು ಹತ್ತು ಅಂಶಗಳ ಕಾರ್ಯಕ್ರಮದ ವಿವರ</th>
+      </tr>
+      <tr style="background:#f8f9fa; font-size:10.5px;">
+        <th style="width: 62%; text-align: left;">ಅಂಶಗಳು / ಪ್ರಶ್ನೆಗಳು</th>
+        <th style="width: 38%; text-align: left;">ವಿವರ / ಅಭಿಪ್ರಾಯ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="q-cell">1. ಯಾವ ಯಾವ ಸಹಪಠ್ಯ ಚಟುವಟಿಕೆಗಳನ್ನು ಕೈಗೊಂಡಿದ್ದಾರೆ?</td>
+        <td class="ans-cell" contenteditable="true"></td>
+      </tr>
+      <tr>
+        <td class="q-cell">2. ಶಾಲೆಯಲ್ಲಿ ಗ್ರಂಥಾಲಯ ನಿರ್ವಹಣೆ ಹೇಗಿದೆ?</td>
+        <td class="ans-cell" contenteditable="true"></td>
+      </tr>
+      <tr>
+        <td class="q-cell">3. ಮಕ್ಕಳು ತಯಾರಿಸಿರುವ ಯೋಜನೆಗಳನ್ನು ತರಗತಿಯಲ್ಲಿ ಪ್ರದರ್ಶಿಸಲಾಗಿದೆಯೇ?</td>
+        <td class="ans-cell" contenteditable="true"></td>
+      </tr>
+      <tr>
+        <td class="q-cell">4. ಶಾಲಾ ಸಂಸತ್ತು ರಚನೆ ಮಾಡಲಾಗಿದೆಯೇ ಅದರ ನಿರ್ವಹಣೆ ಹೇಗಿದೆ?</td>
+        <td class="ans-cell" contenteditable="true"></td>
+      </tr>
+      <tr>
+        <td class="q-cell">5. ಪಢೇ ಭಾರತ್ ಬಢೇ ಭಾರತ್ ಕಾರ್ಯಕ್ರಮದ ಅನುಷ್ಠಾನದ ಬಗ್ಗೆ ಅಭಿಪ್ರಾಯವೇನು?</td>
+        <td class="ans-cell" contenteditable="true"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Item 11: Nali Kali Column Draw -->
+  <table class="q-table">
+    <thead>
+      <tr>
+        <th class="sec-header" colspan="2">11. ನಲಿಕಲಿ ಪ್ರಗತಿ ವಿವರ</th>
+      </tr>
+      <tr style="background:#f8f9fa; font-size:10.5px;">
+        <th style="width: 62%; text-align: left;">ಅಂಶಗಳು / ಪ್ರಶ್ನೆಗಳು</th>
+        <th style="width: 38%; text-align: left;">ವಿವರ / ಅಭಿಪ್ರಾಯ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="q-cell">1. ನಲಿಕಲಿ ತರಗತಿ ಕೋಣೆ ಮತ್ತು ತರಗತಿ ಪರಿಸರದ ಬಗ್ಗೆ ಅಭಿಪ್ರಾಯ :</td>
+        <td class="ans-cell" contenteditable="true"></td>
+      </tr>
+      <tr>
+        <td class="q-cell">2. ನಲಿಕಲಿ ದಾಖಲೆಗಳನ್ನು ನಿರ್ವಹಿಸಲಾಗಿದೆಯೇ?</td>
+        <td class="ans-cell" contenteditable="true"></td>
+      </tr>
+      <tr>
+        <td class="q-cell">3. ನಲಿಕಲಿ ಮಕ್ಕಳಿಗೆ ಮೌಲ್ಯಮಾಪನ ಮಾಡಲಾಗಿದೆಯೇ?</td>
+        <td class="ans-cell" contenteditable="true"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Item 12: Records Column Draw -->
+  <table class="q-table">
+    <thead>
+      <tr>
+        <th class="sec-header" colspan="2">12. ಶಾಲಾ ದಾಖಲೆಗಳ ನಿರ್ವಹಣೆ</th>
+      </tr>
+      <tr style="background:#f8f9fa; font-size:10.5px;">
+        <th style="width: 62%; text-align: left;">ಅಂಶಗಳು / ಪ್ರಶ್ನೆಗಳು</th>
+        <th style="width: 38%; text-align: left;">ವಿವರ / ಅಭಿಪ್ರಾಯ</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="q-cell">1. ಮುಖ್ಯ ಶಿಕ್ಷಕರು ಕ್ರೋಢೀಕೃತ ಅಂಕವಹಿ ನಿರ್ವಹಿಸಿದ್ದಾರೆಯೇ?</td>
+        <td class="ans-cell" contenteditable="true"></td>
+      </tr>
+      <tr>
+        <td class="q-cell">2. ಪ್ರಗತಿ ಪತ್ರ ತುಂಬಿ ಪೋಷಕರಿಗೆ ನೀಡಿ ಚರ್ಚಿಸಲಾಗಿದೆಯೇ?</td>
+        <td class="ans-cell" contenteditable="true"></td>
+      </tr>
+      <tr>
+        <td class="q-cell">3. ಏನಾದರೂ ವಿಶೇಷತೆ ಇದ್ದಲ್ಲಿ ವಿವರ ನೀಡಿ :</td>
+        <td class="ans-cell" contenteditable="true"></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Signatures Grid -->
+  <table class="sig-table">
+    <tr>
+      <td>
+        <div style="min-height: 25px;"></div>
+        ಮುಖ್ಯ ಶಿಕ್ಷಕರ ಸಹಿ
+      </td>
+      <td>
+        <div style="min-height: 25px;"></div>
+        ಮಾರ್ಗದರ್ಶಕರ ಸಹಿ
+      </td>
+    </tr>
+  </table>
+</div>
+
+</body>
+</html>
